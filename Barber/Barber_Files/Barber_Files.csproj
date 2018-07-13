@@ -42,6 +42,25 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="html\AdminApps_html\allusers.html" />
+    <Content Include="html\AdminApps_html\Assets\CSS\admin.css" />
+    <Content Include="html\AdminApps_html\Assets\CSS\login.css" />
+    <Content Include="html\AdminApps_html\Assets\IMG\_MG_mobile.jpg" />
+    <Content Include="html\AdminApps_html\Assets\JS\angular\AdminModule.js" />
+    <Content Include="html\AdminApps_html\Assets\JS\angular\UsersCtrl.js" />
+    <Content Include="html\AdminApps_html\Assets\JS\SideNav.js" />
+    <Content Include="html\AdminApps_html\index.html" />
+    <Content Include="html\AdminApps_html\profile.html" />
+    <Content Include="html\Assets\CSS\style.css" />
+    <Content Include="html\index.html" />
+    <Content Include="SQL\Error.sql" />
+    <Content Include="SQL\Membership.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="html\Assets\IMG\" />
+    <Folder Include="html\Assets\JS\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

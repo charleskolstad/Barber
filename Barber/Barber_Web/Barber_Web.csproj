@@ -117,11 +117,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\CSS\admin.css" />
+    <Content Include="Assets\CSS\login.css" />
+    <Content Include="Assets\JS\angular\AdminModule.js" />
+    <Content Include="Assets\JS\angular\ProfileCtrl.js" />
+    <Content Include="Assets\JS\angular\UsersCtrl.js" />
+    <Content Include="Assets\JS\crop.js" />
+    <Content Include="Assets\JS\SideNav.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -133,6 +141,12 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\Admin\AllUsers.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Admin\ManageAccount.cshtml" />
+    <Content Include="Views\Admin\RecoverPassword.cshtml" />
+    <Content Include="Views\Admin\UserProfile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -140,8 +154,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\Barber_Core\Barber_Core.csproj">
+      <Project>{45a4f785-fb97-4dbc-9b00-9ae57d601fbf}</Project>
+      <Name>Barber_Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Barber_Model\Barber_Model.csproj">
+      <Project>{a92ebb69-a909-41a4-bf9c-752f5f8403d5}</Project>
+      <Name>Barber_Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

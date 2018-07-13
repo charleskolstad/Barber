@@ -40,7 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBCommands.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SprocCalls.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Barber_Model\Barber_Model.csproj">
+      <Project>{a92ebb69-a909-41a4-bf9c-752f5f8403d5}</Project>
+      <Name>Barber_Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

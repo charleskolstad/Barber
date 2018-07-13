@@ -31,7 +31,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +44,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppTools.cs" />
+    <Compile Include="EmailTools.cs" />
+    <Compile Include="MembershipTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider.cs" />
+    <Compile Include="UserManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Barber_Data\Barber_Data.csproj">
+      <Project>{167a5e99-d0ff-438b-abbd-744913f729ea}</Project>
+      <Name>Barber_Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Barber_Model\Barber_Model.csproj">
+      <Project>{a92ebb69-a909-41a4-bf9c-752f5f8403d5}</Project>
+      <Name>Barber_Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
