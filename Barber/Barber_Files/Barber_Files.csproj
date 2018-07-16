@@ -52,15 +52,19 @@
     <Content Include="html\AdminApps_html\Assets\JS\SideNav.js" />
     <Content Include="html\AdminApps_html\index.html" />
     <Content Include="html\AdminApps_html\profile.html" />
+    <Content Include="html\Assets\CSS\gallery.css" />
     <Content Include="html\Assets\CSS\style.css" />
+    <Content Include="html\Assets\IMG\alexandre-godreau-510220-unsplash.jpg" />
+    <Content Include="html\Assets\IMG\chris-bair-411463-unsplash.jpg" />
+    <Content Include="html\Assets\IMG\firza-pratama-682610-unsplash-mobile.jpg" />
+    <Content Include="html\Assets\IMG\firza-pratama-682610-unsplash.jpg" />
+    <Content Include="html\Assets\JS\frontend-ctrl.js" />
+    <Content Include="html\Assets\JS\frontend-module.js" />
     <Content Include="html\index.html" />
     <Content Include="SQL\Error.sql" />
     <Content Include="SQL\Membership.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="html\Assets\IMG\" />
-    <Folder Include="html\Assets\JS\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

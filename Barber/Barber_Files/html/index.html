@@ -6,11 +6,128 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link rel="stylesheet" href="Assets/CSS/gallery.css">
   </head>
   <body>
+    <div class="container">
+        <header class="my-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <div class="col-4 pt-1">
+                    <span class="text-muted top-side">2639 Olen Thomas Drive</span><br>
+                    <span class="text-muted top-side">Brookly Park, MN</span><br>
+                    <span class="text-muted top-side">55428</span>
+                </div>
+                <div class="col-4 text-center">
+                    <a class="my-header-logo text-dark" href="#">Barber Site</a>
+                </div>
+                <div class="col-4 pt-1 text-right"> 
+                    <span class="text-muted top-side">(763)555-1111</span><br>
+                    <span class="text-muted top-side">Mon-Fri: 7am - 8pm</span><br>
+                    <span class="text-muted top-side">Sat: 6am - 3pm</span>
+                </div>
+            </div>
+        </header>
+        
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto py-1 mb-2">
+                    <li class="nav-item active">
+                        <a class="p-2 text-muted" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="p-2 text-muted" href="#">Set Appointment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="p-2 text-muted" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="p-2 text-muted" href="#">Barbers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="p-2 text-muted" href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="p-2 text-muted" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark hero-image">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
+                <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.</p>
+                <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+            </div>
+        </div>
+        
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-primary">World</strong>
+                        <h3 class="mb-0">
+                        <a class="text-dark" href="#">Featured post</a>
+                        </h3>
+                        <div class="mb-1 text-muted">Nov 12</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#">Continue reading</a>
+                    </div>
+
+                    <img class="card-img-right flex-auto d-none d-lg-block" src="Assets/IMG/alexandre-godreau-510220-unsplash.jpg" alt="Card image cap">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                    <div class="card-body d-flex flex-column align-items-start">
+                        <strong class="d-inline-block mb-2 text-success">Design</strong>
+                        <h3 class="mb-0">
+                        <a class="text-dark" href="#">Post title</a>
+                        </h3>
+                        <div class="mb-1 text-muted">Nov 11</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#">Continue reading</a>
+                    </div>
+
+                    <img class="card-img-right flex-auto d-none d-lg-block" src="Assets/IMG/chris-bair-411463-unsplash.jpg" alt="Card image cap">
+                </div>
+            </div>
+        </div>
+        
+        <div ng-app="frontMod">
+            <h2 class="my-title">Recent Cuts</h2>
+            <div class="row" ng-controller="frontCtrl">
+                <div class="col-4 gallery" ng-repeat="item in home.BarberImages| limitTo:6">              
+                    <a href="" class="gallery-link" ng-click="OpenModal($index, home.BarberImages)"><img src="{{item.image}}}" class="img-thumbnail"></a>
+                </div>
+
+                <div id="galModal">
+                    <span class="gallery-close" ng-click="CloseModal()">&times;</span>
+
+                    <div class="gallery-content">
+                        <div class="mySlides"><img src="{{GalleryDisplay[ImgIndex].image}}" alt="" class="img-thumbnail"></div>
+                    </div>
+
+                    <a id="prev" ng-click="changeSlides(-1)">&#10094;</a>
+                    <a id="next" ng-click="changeSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="my-footer">
+        <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    </footer>
+   
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="Assets/JS/frontend-module.js"></script>
+    <script src="Assets/JS/frontend-ctrl.js"></script>
   </body>
 </html>

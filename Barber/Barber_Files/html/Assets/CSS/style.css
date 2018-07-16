@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+.my-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.my-header-logo {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-size: 2.25rem;
+    font-family: 'Fjalla One', sans-serif;
+}
+
+.my-header-logo:hover {
+  text-decoration: none;
+}
+
+.my-title {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+}
+
+.hero-image{
+    min-height: 45vh;
+    padding-top: 10%;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.45), 
+      rgba(0, 0, 0, 0.45)
+    ),
+    url(../IMG/firza-pratama-682610-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0;
+    color: white;
+}
+
+.my-footer {
+    padding: 2.5rem 0;
+    color: #999;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+}
+.my-footer p:last-child {
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 550px) {
+    .hero-image{
+        background: 
+        linear-gradient(
+          rgba(0, 0, 0, 0.45), 
+          rgba(0, 0, 0, 0.45)
+        ),
+        url(../IMG/firza-pratama-682610-unsplash-mobile.jpg);
+    }
+    
+    .top-side{
+        display: none;
+    }
+}
